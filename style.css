@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-color: #350a06;
+    display: flex;
+    justify-content: center; /* Justifica tudo no centro para o eixo X (Esquerda-Direita) */
+    align-items: center; /* Justifica tudo no centro para o eixo Y (Cima-Baixo) */
+}
+
+.static-content {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 3vw;
+    color: rgb(187, 120, 20) 
+}
+
+.left-login-image {
+    width: 35vw;
+}
+
+.login-field{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #8f3d38;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #0f0200;
+}
+
+.card-login h2{
+    color: rgb(187, 120, 20);
+    font-weight: 800;
+    margin: 0;
+}
+
+.text-field{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.text-field > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #8b4f4c;
+    color: azure;
+    font-size: 12pt;
+    outline: none;
+    box-shadow: 0px 10px 40px #0f0200;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.text-field > label {
+    color: rgb(214, 203, 188);
+    margin-bottom: 10px;
+}
+
+.text-field > input::placeholder{
+    color: #f0ffff94;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #350a06;
+    background-color: rgb(187, 120, 20);
+    cursor: pointer; 
+    box-shadow: 0px 10px 40px  -12px  #0f0200;
+}
+
+/* Enquanto for na tela uma largura de 950px 
+    Adicione os seguintes elementos
+*/
+@media only screen and (max-width: 950px){ 
+    .card-login{
+        width: 85%;
+    }                                   
+}
+
+@media only screen and (max-width: 600px){ 
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .static-content {
+        width: 100%;
+        height: auto;
+    }
+
+    .login-field{
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login-image {
+        width: 50vw;
+    }
+
+    .card-login{
+        width: 90%;
+    }
+
+    h1 {
+       display: none;
+    }
+}
